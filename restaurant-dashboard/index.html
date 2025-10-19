@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Dashboard</title>
+  </head>
+  <body>
+    <!-- Vertical Navbar -->
+    <nav class="fixed left-0 top-0 h-full w-[84px] flex flex-col items-center py-6 gap-6" style="background-color: #1F1F1F;" role="navigation" aria-label="Ana navigasyon">
+      <!-- Logo/Home Icon -->
+      <button class="nav-icon active" aria-label="Ana Sayfa" type="button" tabindex="0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+        </svg>
+      </button>
+      
+      <!-- Dashboard Icon -->
+      <button class="nav-icon" aria-label="Dashboard" type="button" tabindex="0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      </button>
+      
+      <!-- Orders Icon -->
+      <button class="nav-icon" aria-label="Siparişler" type="button" tabindex="0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+        </svg>
+      </button>
+      
+      <!-- Menu Icon -->
+      <button class="nav-icon" aria-label="Menü" type="button" tabindex="0">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Header Bar -->
+    <header class="fixed top-0 left-[84px] right-0 h-16 bg-white flex items-center justify-between px-8 z-40" style="box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);" role="banner">
+      <!-- Logo/Title -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center" style="background-color: #1F1F1F;" aria-hidden="true">
+          <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+          </svg>
+        </div>
+        <h1 class="text-xl font-semibold" style="color: #111827;">Restaurant Dashboard</h1>
+      </div>
+      
+      <!-- Profile Icons -->
+      <div class="flex items-center gap-4">
+        <!-- Notification Icon -->
+        <button class="header-icon relative" aria-label="Bildirimler" type="button" tabindex="0">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+          </svg>
+          <!-- Notification Badge -->
+          <span class="absolute top-0 right-0 w-2 h-2 bg-red-500 rounded-full" aria-label="Yeni bildirimler var"></span>
+        </button>
+        
+        <!-- Profile Avatar with Dropdown -->
+        <div class="relative" id="profile-dropdown-container">
+          <button class="flex items-center gap-2 hover:opacity-80 transition-opacity" aria-label="Profil menüsü" type="button" tabindex="0" id="profile-button">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background-color: #bde83a;" aria-hidden="true">
+              <span class="text-sm font-medium" style="color: #1F1F1F;">JD</span>
+            </div>
+            <svg class="w-4 h-4 transition-transform" style="color: #6B7280;" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true" id="profile-arrow">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          
+          <!-- Dropdown Menu -->
+          <div class="hidden absolute right-0 top-full mt-2 w-56 bg-white rounded-xl shadow-lg border border-gray-200 py-2" style="z-index: 9999;" id="profile-dropdown" role="menu" aria-orientation="vertical">
+            <!-- User Info -->
+            <div class="px-4 py-3 border-b border-gray-100">
+              <p class="text-sm font-semibold text-gray-900">John Doe</p>
+              <p class="text-xs text-gray-500 mt-1">john.doe@restaurant.com</p>
+            </div>
+            
+            <!-- Menu Items -->
+            <div class="py-1">
+              <button class="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors" role="menuitem" tabindex="0">
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                </svg>
+                <span>Profilim</span>
+              </button>
+              
+              <button class="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors" role="menuitem" tabindex="0">
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span>Ayarlar</span>
+              </button>
+              
+              <button class="w-full flex items-center gap-3 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 transition-colors" role="menuitem" tabindex="0">
+                <svg class="w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>Yardım</span>
+              </button>
+            </div>
+            
+            <!-- Logout -->
+            <div class="border-t border-gray-100 pt-1">
+              <button class="w-full flex items-center gap-3 px-4 py-2 text-sm text-red-600 hover:bg-red-50 transition-colors" role="menuitem" tabindex="0">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+                <span>Çıkış Yap</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main id="app" class="ml-[84px] mt-16 p-6 bg-gray-50 min-h-screen" role="main" aria-label="Dashboard içeriği">
+      <!-- Dashboard content will be rendered here -->
+    </main>
+    
+    <!-- Profile Dropdown Script -->
+    <script>
+      // Profile dropdown toggle
+      document.addEventListener('DOMContentLoaded', () => {
+        const profileButton = document.getElementById('profile-button');
+        const profileDropdown = document.getElementById('profile-dropdown');
+        const profileArrow = document.getElementById('profile-arrow');
+        
+        if (profileButton && profileDropdown) {
+          // Toggle dropdown
+          profileButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isHidden = profileDropdown.classList.contains('hidden');
+            
+            if (isHidden) {
+              profileDropdown.classList.remove('hidden');
+              profileArrow.style.transform = 'rotate(180deg)';
+            } else {
+              profileDropdown.classList.add('hidden');
+              profileArrow.style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          // Close dropdown when clicking outside
+          document.addEventListener('click', (e) => {
+            if (!profileDropdown.contains(e.target) && !profileButton.contains(e.target)) {
+              profileDropdown.classList.add('hidden');
+              profileArrow.style.transform = 'rotate(0deg)';
+            }
+          });
+          
+          // Close dropdown on ESC key
+          document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && !profileDropdown.classList.contains('hidden')) {
+              profileDropdown.classList.add('hidden');
+              profileArrow.style.transform = 'rotate(0deg)';
+            }
+          });
+        }
+      });
+    </script>
+    
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
