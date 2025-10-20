@@ -53,7 +53,7 @@ export function createChartCard(config) {
     button.setAttribute('data-period', periodKey);
     button.setAttribute('type', 'button');
     button.setAttribute('tabindex', '0');
-    button.setAttribute('aria-label', `${period} period seçeneğini göster`);
+    button.setAttribute('aria-label', `${period} periyodunu göster`);
     button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
 
     // Period change handler fonksiyonu

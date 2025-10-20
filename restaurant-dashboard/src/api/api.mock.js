@@ -286,11 +286,11 @@ export const orders = [
 
 // Kategoriler
 export const categories = [
-  { id: 1, name: 'Breakfast', icon: '🌅', order: 1 },
-  { id: 2, name: 'Main Dishes', icon: '🍽️', order: 2 },
-  { id: 3, name: 'Salads', icon: '🥗', order: 3 },
-  { id: 4, name: 'Desserts', icon: '🍰', order: 4 },
-  { id: 5, name: 'Beverages', icon: '☕', order: 5 }
+  { id: 1, name: 'Kahvaltı', icon: '🌅', order: 1 },
+  { id: 2, name: 'Ana Yemekler', icon: '🍽️', order: 2 },
+  { id: 3, name: 'Salatalar', icon: '🥗', order: 3 },
+  { id: 4, name: 'Tatlılar', icon: '🍰', order: 4 },
+  { id: 5, name: 'İçecekler', icon: '☕', order: 5 }
 ];
 
 // Ürünler

@@ -19,29 +19,47 @@ export async function getKpis() {
 
 /**
  * Gelir grafiği verilerini getirir
- * @param {string} period - Zaman periyodu: 'monthly', 'weekly', 'today'
+ * @param {string} period - Zaman periyodu: 'aylık', 'haftalık', 'bugün'
  * @returns {Promise<Object>} Chart.js formatında grafik verisi
  */
-export async function getRevenue(period = 'monthly') {
+export async function getRevenue(period = 'aylık') {
+  // Türkçe period'u İngilizce'ye çevir
+  const periodMap = {
+    'aylık': 'monthly',
+    'haftalık': 'weekly',
+    'bugün': 'today'
+  };
+  
+  const mappedPeriod = periodMap[period.toLowerCase()] || 'monthly';
+  
   // Mock data kullanımı
-  return mockData.revenue[period];
+  return mockData.revenue[mappedPeriod];
   
   // Backend hazır olduğunda aşağıdaki gibi kullanın:
-  // const response = await fetch(`${API_BASE_URL}/revenue?period=${period}`);
+  // const response = await fetch(`${API_BASE_URL}/revenue?period=${mappedPeriod}`);
   // return response.json();
 }
 
 /**
  * Sipariş özeti grafiği verilerini getirir
- * @param {string} period - Zaman periyodu: 'monthly', 'weekly', 'today'
+ * @param {string} period - Zaman periyodu: 'aylık', 'haftalık', 'bugün'
  * @returns {Promise<Object>} Chart.js formatında grafik verisi
  */
-export async function getOrdersSummary(period = 'monthly') {
+export async function getOrdersSummary(period = 'aylık') {
+  // Türkçe period'u İngilizce'ye çevir
+  const periodMap = {
+    'aylık': 'monthly',
+    'haftalık': 'weekly',
+    'bugün': 'today'
+  };
+  
+  const mappedPeriod = periodMap[period.toLowerCase()] || 'monthly';
+  
   // Mock data kullanımı
-  return mockData.ordersSummary[period];
+  return mockData.ordersSummary[mappedPeriod];
   
   // Backend hazır olduğunda aşağıdaki gibi kullanın:
-  // const response = await fetch(`${API_BASE_URL}/orders-summary?period=${period}`);
+  // const response = await fetch(`${API_BASE_URL}/orders-summary?period=${mappedPeriod}`);
   // return response.json();
 }
 

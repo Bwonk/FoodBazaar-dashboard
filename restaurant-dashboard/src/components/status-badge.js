@@ -12,17 +12,17 @@ export function createStatusBadge(status) {
   // Green-800 on Green-100: 7.8:1 kontrast oranı
   const statusConfig = {
     'new': {
-      label: 'New Order',
+      label: 'Yeni Sipariş',
       bgColor: 'bg-blue-100',
       textColor: 'text-blue-800' // WCAG AA uyumlu - daha koyu mavi
     },
     'on-delivery': {
-      label: 'On Delivery',
+      label: 'Teslimat Aşamasında',
       bgColor: 'bg-orange-100',
       textColor: 'text-orange-800' // WCAG AA uyumlu - daha koyu turuncu
     },
     'completed': {
-      label: 'Completed',
+      label: 'Tamamlandı',
       bgColor: 'bg-green-100',
       textColor: 'text-green-800' // WCAG AA uyumlu - daha koyu yeşil
     },

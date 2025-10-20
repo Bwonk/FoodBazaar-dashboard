@@ -72,7 +72,7 @@ async function loadKpiCards(container) {
 
     // Total Menus Card (Light variant)
     const totalMenusCard = createKpiCard({
-      title: 'Total Menus',
+      title: 'Toplam Menü',
       value: kpis.totalMenus.value,
       percentage: kpis.totalMenus.percentage,
       progress: kpis.totalMenus.progress,
@@ -81,7 +81,7 @@ async function loadKpiCards(container) {
 
     // Total Orders Today Card (Light variant)
     const totalOrdersCard = createKpiCard({
-      title: 'Total Orders Today',
+      title: 'Bugünkü Siparişler',
       value: kpis.totalOrdersToday.value,
       percentage: kpis.totalOrdersToday.percentage,
       progress: kpis.totalOrdersToday.progress,
@@ -90,7 +90,7 @@ async function loadKpiCards(container) {
 
     // Total Client Today Card (Light variant)
     const totalClientsCard = createKpiCard({
-      title: 'Total Client Today',
+      title: 'Bugünkü Müşteriler',
       value: kpis.totalClientsToday.value,
       percentage: kpis.totalClientsToday.percentage,
       progress: kpis.totalClientsToday.progress,
@@ -99,7 +99,7 @@ async function loadKpiCards(container) {
 
     // Revenue Day Ratio Card (Light variant)
     const revenueDayRatioCard = createKpiCard({
-      title: 'Revenue Day Ratio',
+      title: 'Günlük Gelir Oranı',
       value: kpis.revenueDayRatio.value,
       percentage: kpis.revenueDayRatio.percentage,
       progress: kpis.revenueDayRatio.progress,
@@ -133,10 +133,10 @@ async function loadRevenueChart(container) {
 
     // Chart card oluştur
     const { element: chartCard } = createChartCard({
-      title: 'Revenue',
+      title: 'Gelir',
       chartType: 'line',
       data: initialData,
-      periods: ['Monthly', 'Weekly', 'Today'],
+      periods: ['Aylık', 'Haftalık', 'Bugün'],
       onPeriodChange: async (period, updateFn) => {
         // Period değiştiğinde yeni veriyi al ve chart'ı güncelle
         try {
@@ -175,10 +175,10 @@ async function loadOrdersSummaryChart(container) {
 
     // Chart card oluştur
     const { element: chartCard } = createChartCard({
-      title: 'Orders Summary',
+      title: 'Sipariş Özeti',
       chartType: 'bar',
       data: initialData,
-      periods: ['Monthly', 'Weekly', 'Today'],
+      periods: ['Aylık', 'Haftalık', 'Bugün'],
       onPeriodChange: async (period, updateFn) => {
         // Period değiştiğinde yeni veriyi al ve chart'ı güncelle
         try {
@@ -276,7 +276,7 @@ async function loadOrderList(container) {
       },
       {
         key: 'action',
-        label: 'Action',
+        label: 'İşlem',
         sortable: false,
         render: () => {
           // Action button
@@ -385,7 +385,7 @@ async function loadOrderList(container) {
     // Table title
     const title = document.createElement('h3');
     title.className = 'text-lg font-semibold text-gray-900';
-    title.textContent = 'Order List';
+    title.textContent = 'Sipariş Listesi';
 
     // Search input - basit input elementi
     const searchWrapper = document.createElement('div');

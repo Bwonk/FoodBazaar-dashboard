@@ -1,0 +1,22 @@
+{
+  "enabled": true,
+  "name": "Özellik Ekleme Kod Analizi",
+  "description": "Proje dosyalarına özellik eklendiğinde otomatik olarak kod analizi çalıştırır, uyarı ve hataları çözer",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.js",
+      "**/*.ts",
+      "**/*.jsx",
+      "**/*.tsx",
+      "**/*.java",
+      "**/*.go",
+      "**/*.rs"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Bu dosyada yapılan değişiklikleri analiz et. Şu adımları takip et:\n\n1. Kod analizi yap ve varsa hataları/uyarıları tespit et\n2. Tespit edilen hataları ve uyarıları düzelt\n3. Import ifadelerini kontrol et:\n   \n   - Eksik importları ekle\n4. Yapılan değişiklikleri Türkçe olarak özetle\n\nTüm yanıtını Türkçe ver ve kod kalitesini artırmaya odaklan."
+  }
+}
